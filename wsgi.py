@@ -3,6 +3,10 @@ from fbmq import Page
 
 page = Page(PAGE_ACCESS_TOKEN)
 
+@application.route("/")
+def hello():
+    return "Hello World!"
+    
 @app.route('/webhook', methods=['POST'])
 def webhook():
   page.handle_webhook(request.get_data(as_text=True))
@@ -20,3 +24,6 @@ def message_handler(event):
 def after_send(payload, response):
   """:type payload: fbmq.Payload"""
   print("complete")
+  
+ if __name__ == "__main__":
+     application.run()
