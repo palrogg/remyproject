@@ -2,7 +2,7 @@ from flask import Flask, request
 #from fbmq import Page
 from os import environ
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 PAGE_ACCESS_TOKEN = environ.get('PAGE_ACCESS_TOKEN')
 
@@ -14,17 +14,17 @@ except NameError:
     
 #page = Page(PAGE_ACCESS_TOKEN)
 
-@app.route("/")
+@application.route("/")
 def hello():
     return "Hello World!"
 
-@app.route('/webhook', methods=['GET', 'POST'])
+@application.route('/webhook', methods=['GET', 'POST'])
 def webhook():
     #page.handle_webhook(request.get_data(as_text=True))
     return "ok"
 
     
-# @app.route('/webhook', methods=['POST'])
+# @application.route('/webhook', methods=['POST'])
 # def webhook():
 #     page.handle_webhook(request.get_data(as_text=True))
 #     return "ok"
@@ -43,4 +43,4 @@ def webhook():
 #     print("complete")
   
 if __name__ == "__main__":
-    app.run()
+    application.run()
