@@ -1,9 +1,10 @@
 from flask import Flask, request
 from fbmq import Page
+from os import environ
 
 app = Flask(__name__)
 
-PAGE_ACCESS_TOKEN = os.environ.get('PAGE_ACCESS_TOKEN')
+PAGE_ACCESS_TOKEN = environ.get('PAGE_ACCESS_TOKEN')
 
 try:
     PAGE_ACCESS_TOKEN
