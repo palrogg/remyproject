@@ -3,6 +3,8 @@ from fbmq import Page
 
 app = Flask(__name__)
 
+PAGE_ACCESS_TOKEN = os.environ.get('PAGE_ACCESS_TOKEN')
+
 try:
     PAGE_ACCESS_TOKEN
 except NameError:
