@@ -1,9 +1,17 @@
 from flask import Flask, request
 from fbmq import Page
 
+app = Flask(__name__)
+
+try:
+    PAGE_ACCESS_TOKEN
+except NameError:
+    print("Access token was NOT defined!")
+    PAGE_ACCESS_TOKEN = 'dummy'
+    
 page = Page(PAGE_ACCESS_TOKEN)
 
-@application.route("/")
+@app.route("/")
 def hello():
     return "Hello World!"
     
@@ -26,4 +34,4 @@ def after_send(payload, response):
     print("complete")
   
 if __name__ == "__main__":
-    application.run()
+    app.run()
