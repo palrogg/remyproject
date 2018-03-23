@@ -9,3 +9,7 @@ Il fonctionne avec:
 * l’[API Messenger de Facebook](https://developers.facebook.com/docs/messenger-platform/getting-started/quick-start)
 
 * la [librairie fbmq](https://github.com/conbus/fbmq) pour interagir avec l’API
+
+Setup du serveur nginx - Flask - gunicorn sur Digitalocean:
+
+https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uwsgi-and-nginx-on-ubuntu-14-04
