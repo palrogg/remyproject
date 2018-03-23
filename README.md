@@ -12,4 +12,6 @@ Il fonctionne avec:
 
 Setup du serveur nginx - Flask - gunicorn sur Digitalocean:
 
-https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uwsgi-and-nginx-on-ubuntu-14-04
+https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-16-04
+
+cat /var/log/nginx/error.log
